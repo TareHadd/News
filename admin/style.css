@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+#main{
+    transition: 0.5s;
+}
+
+.ml-my{
+    margin-left: 200px;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 94%;
+    width: 100%;
+}
+
+.logout{
+    color: white;
+    text-decoration: none;
+}
+
+.navigation{
+    position: fixed;
+    width: 0;
+    top: 6%;
+    height: 100vh;
+    font-size: 20px;
+    transition: 0.5s;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.navigation ul{
+    margin-bottom: 50px;
+}
+
+.active{
+    width: 200px;
+    height: 100%;
+    transition: 0.5s;
+    overflow-y:auto;
+    background: yellow;
+}
+
+.navigation ul{
+    width: 100%;
+    padding:0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation li{
+    width: 100%;
+    list-style: none;
+    padding: 10px;
+    margin: 5px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.navigation li:hover{
+    background: rgba(14, 13, 13, 0.5);
+}
+
+.navigation a{
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.toggle{
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.toggle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('includes/slike/menu.png') center no-repeat;
+}
+
+.toggle:hover{
+    background: rgba(214, 199, 111, 0.3);
+}
+
+
+
+/* =======================  */
+
+.main-page-col{
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: 0.8s;
+    color: white;
+
+}
+
+.main-page-col p{
+    font-size: 1rem;
+}
+
+.main-page-col h4{
+    font-size: 2rem;
+}
+
+.main-page-col:hover{
+   transform: scale(1.1);
+}
+
+.main-page-col{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:600px){
+    .ml-my{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:1000px) and (max-height:800px){
+    .navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 90%;
+        width: 100%;
+    
+    }
+    
+    .navigation{
+        position: fixed;
+        width: 0;
+        top: 10%;
+        height: 100vh;
+        font-size: 20px;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .active{
+        width: 200px;
+        height: 100%;
+        transition: 0.5s;
+        overflow-y:auto;
+    }
+}
+
+
+/*  STATIC CLASSES FOR USE */
+
+.width-100{
+    width: 100%;
+    height: 100%;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
