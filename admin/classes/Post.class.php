@@ -1,5 +1,6 @@
 <?php
 
+
 class Post extends Database
 {
     public  function generateRandomString($length)
@@ -31,18 +32,18 @@ class Post extends Database
             $custom = $this->generateRandomString(5);
 
 
-            // if (empty($naslov) || empty($$opis) || empty($autor) || empty($datum))
-            // {
-            //     header('location: ../pages/post.php?error=empty');
-            //     exit();
-            // }
+            if (empty($naslov) && empty($opis) && empty($autor) && empty($datum))
+            {
+                header('location: ../pages/post.php?error=empty');
+                exit();
+            }
 
-            if (!is_dir('slike')) {
-                mkdir('slike');
+            if (!is_dir('./../includes/slike')) {
+                mkdir('./../includes/slike');
             }
 
             if ($slika) {
-                $imagePath = 'slike/' . $this->generateRandomString(5) . '/' . $slika['name'];
+                $imagePath = './../includes/slike/' . $this->generateRandomString(5) . '/' . $slika['name'];
                 mkdir(dirname($imagePath));
                 move_uploaded_file($slika['tmp_name'], $imagePath);
             }

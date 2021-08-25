@@ -76,7 +76,7 @@ if (!isset($_SESSION['username']))
                 </div>
                 <div class="col-md-3 my-2 bg-warning main-page-col  d-flex flex-column justify-content-center p-5">
                 <div>
-                    <p><a href="../../Blog">Stranica</a></p>
+                    <p><a href="../../news">Stranica</a></p>
                 </div>
                 </div>
             </div>

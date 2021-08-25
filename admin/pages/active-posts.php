@@ -4,7 +4,7 @@ require '../autoload/autoloader.php';
 $new_post = new Post();
 $delete = new Delete();
 $string = 'vijest';
-
+ob_start();
 ?>
 
 <?php include('../includes/html/header.php') ?>

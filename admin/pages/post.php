@@ -72,7 +72,7 @@ $validation = new Validation();
                                 <div class="mb-3">
                                     <h4>Opis</h4>
                                     <textarea name="opis" class="form-control <?php //$validation->PostValidation(); ?> " rows="3" 
-                                    placeholder="Na drugom laptopu radi na kojem sam pisao kod ali ovdje nece da upiše tako da preskoči ako budes testirao, ostavi prazno"></textarea>
+                                    ></textarea>
                                     <div class="invalid-feedback">
                                         Popunite polje.
                                     </div>
