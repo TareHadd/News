@@ -1,0 +1,262 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Aug 25, 2021 at 06:01 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.3.26
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `blog`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `id` int(11) NOT NULL,
+  `ime` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `ime`) VALUES
+(2, 'Religija'),
+(4, 'Sport'),
+(7, 'Zanimljivosti'),
+(9, 'Svijet'),
+(10, 'BiH'),
+(11, 'Krajina');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `name`, `email`, `username`, `password`) VALUES
+(2, 'Tarik', 'hadzic333@outlook.com', 'TarikHadd', '$2y$10$RagCIQtNqHNiZz3dM5KjYu2FPtHrDm9uKuKQY3KZWaCKkvzDMA.my'),
+(6, 'Tarik', 'tarikhad@outlook.com', 'TareHadd', '$2y$10$OzXptbcLTNw8.p/rlnAM0uwtwZ0FUF/NMFFQ6b3/aVAyrZe01eulm');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `message`
+--
+
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL,
+  `ime` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `poruka` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `slike_prilog`
+--
+
+CREATE TABLE `slike_prilog` (
+  `id` int(11) NOT NULL,
+  `prilog` varchar(100) NOT NULL,
+  `vijest_id` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `slike_prilog`
+--
+
+INSERT INTO `slike_prilog` (`id`, `prilog`, `vijest_id`) VALUES
+(1, 'prilog/resoA/b4.jpg', '14'),
+(2, 'prilog/resoA/b8.jpg', '14'),
+(3, 'prilog/cQiGI/b7.jpg', '14'),
+(4, 'prilog/cQiGI/b8.jpg', '14'),
+(5, 'prilog/qw0sO/b7.jpg', '14'),
+(6, 'prilog/qw0sO/b8.jpg', '14'),
+(7, 'prilog/y0Ka3/b7.jpg', '15'),
+(8, 'prilog/y0Ka3/b8.jpg', '15'),
+(9, 'prilog/Ju3ZP/lion.jpg', '16'),
+(10, 'prilog/Ju3ZP/night.jpg', '16'),
+(11, 'prilog//stars.jpg', '17'),
+(12, 'prilog/5v3f8/', '18'),
+(17, 'prilog/5qAZ9/sparks.jpg', '19'),
+(18, 'prilog/aZSk7/stars.jpg', '19'),
+(19, 'prilog/AOWIx/', '20'),
+(20, 'prilog/bGZ4W/sparks.jpg', '21'),
+(21, 'prilog/bGZ4W/stars.jpg', '21'),
+(22, 'prilog/bGZ4W/starss.jpg', '21'),
+(23, 'prilog/LqAfj/sparks.jpg', '22'),
+(24, 'prilog/LqAfj/stars.jpg', '22'),
+(25, 'prilog/IP0qr/wp2651996.jpg', '23'),
+(26, 'prilog/8R4x5/', '23'),
+(27, 'prilog/AlX9t/b6.jpg', '24'),
+(28, 'prilog/9qm3c/', '25'),
+(29, 'prilog/xXm9C/Screenshot_20210414-005545_Facebook.jpg', '26'),
+(30, 'prilog/rfiLB/IMG_20200814_144800_320.jpg', '27'),
+(41, 'prilog/dpqS0/', '28'),
+(42, 'prilog/EVPhz/', '29'),
+(43, 'prilog/Muty3/', '29'),
+(44, 'prilog/8iEJY/', '30'),
+(45, 'prilog/XGrYg/FB_IMG_1618688018762.jpg', '31'),
+(46, 'prilog/GWqsE/FB_IMG_1619271116285.jpg', '32'),
+(47, 'prilog/WcCiF/', '32'),
+(48, 'prilog/DoRyl/', '32'),
+(49, 'prilog/hxnJn/', '32'),
+(50, 'prilog/wsJcS/', '32'),
+(51, 'prilog/I2cbr/', '32'),
+(52, 'prilog/cCSCU/', '32'),
+(53, 'prilog/QXrR2/', '32'),
+(54, 'prilog/yHuXY/', '32'),
+(55, 'prilog/pGvbJ/', '32'),
+(56, 'prilog/7umNY/', '32'),
+(57, 'prilog/waCCt/', '32'),
+(58, 'prilog/fAL4r/', '32'),
+(59, 'prilog/ecawM/', '32'),
+(60, 'prilog/0H1Wq/', '32'),
+(61, 'prilog/rdj8C/', '33'),
+(62, 'prilog/kqXk6/', '32'),
+(63, 'prilog/54DQH/', '34'),
+(64, 'prilog/lH6PC/', '34'),
+(65, 'prilog/RgU6C/', '32'),
+(66, 'prilog/gLKAU/', '32'),
+(67, 'prilog/w4Wd9/', '32'),
+(68, 'prilog/Tx9S2/', '35'),
+(69, 'prilog/ye3tO/', '35');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vijest`
+--
+
+CREATE TABLE `vijest` (
+  `id` int(11) NOT NULL,
+  `naslov` varchar(100) NOT NULL,
+  `kategorija` varchar(100) NOT NULL,
+  `kratak_opis` varchar(100) NOT NULL,
+  `opis` longtext NOT NULL,
+  `slika` varchar(256) NOT NULL,
+  `autor` varchar(100) NOT NULL,
+  `datum` varchar(100) NOT NULL,
+  `views` int(255) DEFAULT NULL,
+  `comments` int(100) DEFAULT NULL,
+  `tags` varchar(100) NOT NULL,
+  `status` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `vijest`
+--
+
+INSERT INTO `vijest` (`id`, `naslov`, `kategorija`, `kratak_opis`, `opis`, `slika`, `autor`, `datum`, `views`, `comments`, `tags`, `status`) VALUES
+(18, 'Ovo je nova informativna stranica', 'Svijet', 'Opisa nema', 'Opisa nema', 'slike/yfW9PGu/sparks.jpg', 'Tarik', '2021-04-02', NULL, NULL, 'Test', 'objavljeno'),
+(19, 'Testna', 'Svijet', 'Test', 'Test', 'slike/ln4eHIl/sparks.jpg', 'Tarik', '2021-04-03', NULL, NULL, 'Test', 'objavljeno'),
+(20, 'Ovo je nova informativna stranica', 'Svijet', 'Nema', 'Nema', 'slike/JXKp0/stars.jpg', 'Tarik', '2021-04-03', NULL, NULL, 'Test', 'objavljeno'),
+(21, 'Ovo je nova informativna stranica', 'Svijet', 'Test', 'Test', 'slike/5hQCv/mountains.jpg', 'Tarik', '2021-04-04', NULL, NULL, 'Nema', 'objavljeno'),
+(28, 'Testna vijest', 'Svijet', 'Ovo je testna vijest', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quisquam at laudantium illum pariatur iusto, rerum odio voluptates? Cumque et, sed temporibus incidunt quos perspiciatis repellendus, reprehenderit officiis, adipisci facere velit omnis dolorem hic repellat quidem harum illum. Sint dolorum consequuntur, qui nesciunt ex atque veniam velit dolore sunt quaerat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic facilis, quidem ex blanditiis suscipit provident debitis deleniti. Debitis sint cum necessitatibus tempore earum quidem dignissimos, consectetur sit molestiae id voluptatum quibusdam? Dolorem distinctio aliquid ducimus pariatur, amet illo possimus libero placeat officiis sit sapiente iusto ipsa quas voluptate tenetur laborum sint doloribus laboriosam quis exercitationem adipisci? Eum harum rem ad veritatis omnis earum rerum amet sit deserunt non exercitationem nesciunt dicta, repudiandae odio, ut culpa eveniet velit aperiam quibusdam officia ea dolorem quia labore delectus. Quam, et iusto. Iste quibusdam dolorum esse tempora aliquam omnis est libero ducimus aliquid eaque.  \r\n\r\n\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Est quisquam at laudantium illum pariatur iusto, rerum odio voluptates? Cumque et, sed temporibus incidunt quos perspiciatis repellendus, reprehenderit officiis, adipisci facere velit omnis dolorem hic repellat quidem harum illum. Sint dolorum consequuntur, qui nesciunt ex atque veniam velit dolore sunt quaerat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic facilis, quidem ex blanditiis suscipit provident debitis deleniti. Debitis sint cum necessitatibus tempore earum quidem dignissimos, consectetur sit molestiae id voluptatum quibusdam? Dolorem distinctio aliquid ducimus pariatur, amet illo possimus libero placeat officiis sit sapiente iusto ipsa quas voluptate tenetur laborum sint doloribus laboriosam quis exercitationem adipisci? Eum harum rem ad veritatis omnis earum rerum amet sit deserunt non exercitationem nesciunt dicta, repudiandae odio, ut culpa eveniet velit aperiam quibusdam officia ea dolorem quia labore delectus. Quam, et iusto. Iste quibusdam dolorum esse tempora aliquam omnis est libero ducimus aliquid eaque.\r\n\r\n\r\nLorem ipsum dolor sit amet consectetur adipisicing elit. Est quisquam at laudantium illum pariatur iusto, rerum odio voluptates? Cumque et, sed temporibus incidunt quos perspiciatis repellendus, reprehenderit officiis, adipisci facere velit omnis dolorem hic repellat quidem harum illum. Sint dolorum consequuntur, qui nesciunt ex atque veniam velit dolore sunt quaerat?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic facilis, quidem ex blanditiis suscipit provident debitis deleniti. Debitis sint cum necessitatibus tempore earum quidem dignissimos, consectetur sit molestiae id voluptatum quibusdam? Dolorem distinctio aliquid ducimus pariatur, amet illo possimus libero placeat officiis sit sapiente iusto ipsa quas voluptate tenetur laborum sint doloribus laboriosam quis exercitationem adipisci? Eum harum rem ad veritatis omnis earum rerum amet sit deserunt non exercitationem nesciunt dicta, repudiandae odio, ut culpa eveniet velit aperiam quibusdam officia ea dolorem quia labore delectus. Quam, et iusto. Iste quibusdam dolorum esse tempora aliquam omnis est libero ducimus aliquid eaque.', 'slike/snahA5C/slide1.jpg', 'Tarik', '2021-04-22', NULL, NULL, 'Nema', 'objavljeno'),
+(29, 'Neki naslov', 'Zanimljivosti', 'In its simplest use, you only specify the horizontal shadow and the vertical shadow', 'In its simplest use, you only specify the horizontal shadow and the vertical shadow.In its simplest use, you only specify the horizontal shadow and the vertical shadow.', 'slike/KUqmC/black.jpg', 'Tarik', '2021-04-24', NULL, NULL, 'Nema', 'objavljeno'),
+(30, 'Vijest', 'Religija', 'Nema', 'Nema', 'slike/6UboI/game.png', 'JA', '2021-04-24', NULL, NULL, 'Nema', 'objavljeno'),
+(32, 'Amna eno je stoji', 'Amnina kategorija', 'Stoji ispred mene', 'Nema', 'slike/m4mTS/20210426_224558.jpg', 'Amna i Tarik', '2021-04-26', NULL, NULL, 'Nema', 'skica'),
+(35, 'Ovo je nova informativna stranica', 'Svijet', '             sacaca                       ', 'ascascascaca ', 'slike/WMTX1/jihIO9.jpg', 'Tarik', '2021-05-20', NULL, NULL, 'Nema', 'objavljeno');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `message`
+--
+ALTER TABLE `message`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `slike_prilog`
+--
+ALTER TABLE `slike_prilog`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `vijest`
+--
+ALTER TABLE `vijest`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `message`
+--
+ALTER TABLE `message`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `slike_prilog`
+--
+ALTER TABLE `slike_prilog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+
+--
+-- AUTO_INCREMENT for table `vijest`
+--
+ALTER TABLE `vijest`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
